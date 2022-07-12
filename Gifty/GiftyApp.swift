@@ -11,7 +11,10 @@ import SwiftUI
 struct GiftyApp: App {
     var body: some Scene {
         WindowGroup {
+//            AuthView()
             ContentView()
+//            RegisterView()
+//            ResetPasswordView()
         }
     }
 }
