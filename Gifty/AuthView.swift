@@ -2,58 +2,60 @@
 //  AuthView.swift
 //  Gifty
 //
-//  Created by Michael Amiro on 08/07/2022.
+//  Created by Michael Amiro on 12/07/2022.
 //
 
 import SwiftUI
 
 struct AuthView: View {
-    @StateObject var viewModel = AuthViewModel()
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                Text("Log in")
-                    .font(.title.weight(.bold))
-                VStack(spacing: 15) {
-                    RegularTextField(
-                        text: $viewModel.username,
-                        title: "Username",
-                        placeholder: "Username",
-                        errorMessage: "Username is not valid.",
-                        textContextType: .username,
-                        autocapitalize: .never)
-                    SecureTextField(
-                        text: $viewModel.password,
-                        title: "Password",
-                        placeholder: "Password",
-                        showLabel: true,
-                        messageText: "Password you entered is too short")
-                }
-                Button("Log in") {
-                    print("login")
-                }
-                .disabled(!viewModel.isValid())
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: 46)
-                .background(viewModel.isValid() ? Color.accentColor : Color.gray)
-                .cornerRadius(8)
-                VStack(spacing: 40) {
-                    HStack (spacing: 2) {
-                        Button("Sign up") {
-
+        ZStack {
+            Rectangle()
+                .fill(Color.white)
+                .ignoresSafeArea()
+            VStack(spacing: 10) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack {
+                        VStack(spacing: 10) {
+                            Image("someone")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: 300)
+                            Text("This is an example of how things work and how they should be represented")
+                                .font(.custom(CustomFont.medium, size: 12))
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.gray)
+                                .padding(.horizontal, 30)
                         }
-                        .buttonStyle(.plain)
-                        .foregroundColor(.accentColor)
-                        Spacer()
-                        Button("Forgot Password") {
-
+                        .padding(.top, 80)
+                        .frame(maxWidth: UIScreen.main.bounds.width)
+                        VStack(spacing: 10) {
+                            Image("someone")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: 300)
+                            Text("This is an example of how things work and how they should be represented")
+                                .font(.custom(CustomFont.medium, size: 12))
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.gray)
+                                .padding(.horizontal, 30)
                         }
-                        .buttonStyle(.plain)
-                        .foregroundColor(.accentColor)
-                    }.font(.custom(CustomFont.medium, size: 14))
+                        .padding(.top, 80)
+                        .frame(maxWidth: UIScreen.main.bounds.width)
+                    }
                 }
-            }.padding()
+                Spacer()
+                Group {CustomButton(title: "Create account") {
+                    print("Create account")
+                }
+                CustomButton(title: "Log in", buttonColor: Color.secondaryColor, buttonStyle: .bordered) {
+                    print("Login")
+                }
+                Text("Make your event memorable, if you dare!")
+                    .font(.custom(CustomFont.regular, size: 10))
+                    .foregroundColor(.gray)
+                }.padding()
+            }
         }
     }
 }

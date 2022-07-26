@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class AuthViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
     @AppStorage("AUTH_KEY") var authenticated = false {
         willSet { objectWillChange.send() }
     }
@@ -22,5 +22,9 @@ class AuthViewModel: ObservableObject {
 
     func isValid() -> Bool {
         return !username.isEmpty && !password.isEmpty
+    }
+
+    func performLogin() {
+        print("Logging in from view model")
     }
 }

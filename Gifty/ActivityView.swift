@@ -11,38 +11,46 @@ struct ActivityView: View {
     var viewModel = ActivityViewModel()
 
     var body: some View {
-        if viewModel.activities.count > 0 {
-            Form {
+        Form {
+            Section {
                 ForEach(viewModel.activities, id: \.id) { activity in
-                    HStack(spacing: 15) {
-                        Image("someone")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 50, height: 50, alignment: .center)
-                            .cornerRadius(8)
-                        VStack(alignment: .leading, spacing: 3) {
-                            Text("**Joy Mwiti** has contributed KES 20,000 to your wedding registry.")
-                                .font(.custom(CustomFont.regular, size: 13))
-                            Text("20 mins ago")
-                                .font(.custom(CustomFont.regular, size: 12))
-                                .foregroundColor(.secondary)
+                    ActivityItemView(activity: activity)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                withAnimation {
+                                    viewModel.delete(activity)
+                                }
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
                         }
-                    }
-                    .padding(.vertical, 5)
+                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                            Button {
+                                withAnimation {
+                                    viewModel.markAsRead(activity)
+                                }
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }.tint(.primaryColor)
+                        }
                 }
             }
-        } else {
-            VStack {
-                Image("someone")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 200, alignment: .center)
-                Text("You don't have any new activities on your account. We will notify you when we also get the updates.")
-                    .foregroundColor(.primary.opacity(0.6))
-                    .font(.custom(CustomFont.regular, size: 15))
-                    .multilineTextAlignment(.center)
-            }.padding()
         }
+
+        //        if viewModel.activities.count > 0 {
+        //
+        //        } else {
+        //            VStack {
+        //                Image("someone")
+        //                    .resizable()
+        //                    .aspectRatio(contentMode: .fit)
+        //                    .frame(width: 200, height: 200, alignment: .center)
+        //                Text("You don't have any new activities on your account. We will notify you when we also get the updates.")
+        //                    .foregroundColor(.primary.opacity(0.6))
+        //                    .font(.custom(CustomFont.regular, size: 15))
+        //                    .multilineTextAlignment(.center)
+        //            }.padding()
+        //        }
     }
 }
 

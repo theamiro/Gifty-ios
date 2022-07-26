@@ -48,17 +48,9 @@ struct RegisterView: View {
                         messageText: "The password you entered is too short.")
                 }
                 VStack(alignment: .center, spacing: 10) {
-                    Button {
-                        print("login")
-                    } label: {
-                        Text("Create account")
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity, maxHeight: 46)
+                    CustomButton(title: "Create an account", disabled: viewModel.isValid()) {
+                        viewModel.submit()
                     }
-                    .disabled(!viewModel.isValid())
-                    .background(viewModel.isValid() ? Color.accentColor : Color.gray)
-                    .cornerRadius(8)
                     VStack {
                         Text("By creating an account, you agree to the ")
                             .foregroundColor(.secondary)
@@ -68,20 +60,10 @@ struct RegisterView: View {
                         }
                     }.font(.custom(CustomFont.regular, size: 13))
                 }
-                Button {
 
-                } label: {
-                    VStack(spacing: 0) {
-                        Text("Already have an account?").font(.caption.weight(.medium))
-                        Text("Log in").fontWeight(.medium)
-                    }
-                    .foregroundColor(.accentColor)
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: 52)
+                CustomButton(title: "Log in", buttonColor: .secondaryColor, buttonStyle: .bordered) {
+                    print()
                 }
-                .background(Color.yellow)
-                .cornerRadius(8)
-
             }.padding()
         }
     }

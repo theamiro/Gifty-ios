@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9015D74287DA8C30078D0BB /* ActivityItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9015D73287DA8C30078D0BB /* ActivityItemView.swift */; };
 		C91E8A0928740C4E00408BDF /* TopNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E8A0828740C4E00408BDF /* TopNavigation.swift */; };
 		C91E8A172874274900408BDF /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C91E8A15287424F700408BDF /* OpenSans-SemiBold.ttf */; };
 		C91E8A182874274900408BDF /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C91E8A162874254200408BDF /* OpenSans-ExtraBold.ttf */; };
@@ -19,14 +20,17 @@
 		C91E8A222874590600408BDF /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E8A212874590600408BDF /* ActivityView.swift */; };
 		C91E8A242874591700408BDF /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E8A232874591700408BDF /* ActivityViewModel.swift */; };
 		C91E8A2628745ADD00408BDF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E8A2528745ADD00408BDF /* Activity.swift */; };
-		C924A67E2878647300C3276B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C924A67D2878647300C3276B /* AuthView.swift */; };
+		C924A67E2878647300C3276B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C924A67D2878647300C3276B /* LoginView.swift */; };
 		C924A680287C570500C3276B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C924A67F287C570500C3276B /* RegisterView.swift */; };
 		C924A682287C5AD400C3276B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C924A681287C5AD400C3276B /* RegisterViewModel.swift */; };
-		C9479BC828784E7300810926 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9479BC728784E7300810926 /* AuthViewModel.swift */; };
+		C9479BC828784E7300810926 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9479BC728784E7300810926 /* LoginViewModel.swift */; };
 		C9A58B19287C620400AD02C8 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A58B18287C620400AD02C8 /* TextFields.swift */; };
 		C9CF45F0287C82C500270B09 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF45EF287C82C500270B09 /* Validation.swift */; };
 		C9CF45F2287C93C400270B09 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF45F1287C93C400270B09 /* ResetPasswordView.swift */; };
 		C9CF45F4287C941D00270B09 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF45F3287C941D00270B09 /* ResetPasswordViewModel.swift */; };
+		C9CF45F6287D532300270B09 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF45F5287D532300270B09 /* AuthView.swift */; };
+		C9CF45F8287D534900270B09 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF45F7287D534900270B09 /* Buttons.swift */; };
+		C9CF45FA287D62B900270B09 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF45F9287D62B900270B09 /* Color.swift */; };
 		C9DF3201287315E6000AC6BD /* GiftyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF3200287315E6000AC6BD /* GiftyApp.swift */; };
 		C9DF3203287315E6000AC6BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF3202287315E6000AC6BD /* ContentView.swift */; };
 		C9DF3205287315EA000AC6BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9DF3204287315EA000AC6BD /* Assets.xcassets */; };
@@ -35,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9015D73287DA8C30078D0BB /* ActivityItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityItemView.swift; sourceTree = "<group>"; };
 		C91E8A0828740C4E00408BDF /* TopNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigation.swift; sourceTree = "<group>"; };
 		C91E8A10287420F900408BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C91E8A11287424F700408BDF /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -48,14 +53,17 @@
 		C91E8A212874590600408BDF /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		C91E8A232874591700408BDF /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		C91E8A2528745ADD00408BDF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		C924A67D2878647300C3276B /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		C924A67D2878647300C3276B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C924A67F287C570500C3276B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		C924A681287C5AD400C3276B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		C9479BC728784E7300810926 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C9479BC728784E7300810926 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C9A58B18287C620400AD02C8 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 		C9CF45EF287C82C500270B09 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		C9CF45F1287C93C400270B09 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		C9CF45F3287C941D00270B09 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		C9CF45F5287D532300270B09 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		C9CF45F7287D534900270B09 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		C9CF45F9287D62B900270B09 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C9DF31FD287315E6000AC6BD /* Gifty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gifty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DF3200287315E6000AC6BD /* GiftyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftyApp.swift; sourceTree = "<group>"; };
 		C9DF3202287315E6000AC6BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,15 +105,19 @@
 				C91E8A10287420F900408BDF /* Info.plist */,
 				C9DF3200287315E6000AC6BD /* GiftyApp.swift */,
 				C9DF3202287315E6000AC6BD /* ContentView.swift */,
-				C9479BC728784E7300810926 /* AuthViewModel.swift */,
-				C924A67D2878647300C3276B /* AuthView.swift */,
+				C9479BC728784E7300810926 /* LoginViewModel.swift */,
+				C924A67D2878647300C3276B /* LoginView.swift */,
 				C9CF45F1287C93C400270B09 /* ResetPasswordView.swift */,
+				C9CF45F5287D532300270B09 /* AuthView.swift */,
+				C9CF45F9287D62B900270B09 /* Color.swift */,
+				C9CF45F7287D534900270B09 /* Buttons.swift */,
 				C9CF45F3287C941D00270B09 /* ResetPasswordViewModel.swift */,
 				C924A67F287C570500C3276B /* RegisterView.swift */,
 				C9CF45EF287C82C500270B09 /* Validation.swift */,
 				C9A58B18287C620400AD02C8 /* TextFields.swift */,
 				C924A681287C5AD400C3276B /* RegisterViewModel.swift */,
 				C91E8A212874590600408BDF /* ActivityView.swift */,
+				C9015D73287DA8C30078D0BB /* ActivityItemView.swift */,
 				C91E8A232874591700408BDF /* ActivityViewModel.swift */,
 				C91E8A2528745ADD00408BDF /* Activity.swift */,
 				C91E8A1D28742B4100408BDF /* SettingsView.swift */,
@@ -221,16 +233,20 @@
 				C91E8A2628745ADD00408BDF /* Activity.swift in Sources */,
 				C9CF45F2287C93C400270B09 /* ResetPasswordView.swift in Sources */,
 				C924A680287C570500C3276B /* RegisterView.swift in Sources */,
+				C9015D74287DA8C30078D0BB /* ActivityItemView.swift in Sources */,
 				C9DF321028731602000AC6BD /* TabBarView.swift in Sources */,
 				C9A58B19287C620400AD02C8 /* TextFields.swift in Sources */,
 				C9CF45F4287C941D00270B09 /* ResetPasswordViewModel.swift in Sources */,
+				C9CF45F6287D532300270B09 /* AuthView.swift in Sources */,
 				C91E8A0928740C4E00408BDF /* TopNavigation.swift in Sources */,
 				C9DF3201287315E6000AC6BD /* GiftyApp.swift in Sources */,
-				C9479BC828784E7300810926 /* AuthViewModel.swift in Sources */,
+				C9479BC828784E7300810926 /* LoginViewModel.swift in Sources */,
 				C924A682287C5AD400C3276B /* RegisterViewModel.swift in Sources */,
+				C9CF45FA287D62B900270B09 /* Color.swift in Sources */,
 				C91E8A242874591700408BDF /* ActivityViewModel.swift in Sources */,
 				C91E8A2028744E3900408BDF /* SettingsViewModel.swift in Sources */,
-				C924A67E2878647300C3276B /* AuthView.swift in Sources */,
+				C924A67E2878647300C3276B /* LoginView.swift in Sources */,
+				C9CF45F8287D534900270B09 /* Buttons.swift in Sources */,
 				C9CF45F0287C82C500270B09 /* Validation.swift in Sources */,
 				C91E8A222874590600408BDF /* ActivityView.swift in Sources */,
 			);
@@ -358,10 +374,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gifty/Preview Content\"";
-				DEVELOPMENT_TEAM = 2S7XZ9B5JY;
+				DEVELOPMENT_TEAM = CVR223BS4M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gifty/Info.plist;
@@ -377,6 +394,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelamiro.Gifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,10 +406,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gifty/Preview Content\"";
-				DEVELOPMENT_TEAM = 2S7XZ9B5JY;
+				DEVELOPMENT_TEAM = CVR223BS4M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gifty/Info.plist;
@@ -407,6 +426,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelamiro.Gifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

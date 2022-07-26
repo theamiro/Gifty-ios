@@ -8,8 +8,9 @@
 import Foundation
 
 struct Activity {
-    let id = UUID()
-    let message: String
-    let createdAt: String
-    let updatedAt: String
+    var id = UUID()
+    var message: String
+    var isRead: Bool
+    var createdAt: String
+    var updatedAt: String
 }

@@ -16,4 +16,8 @@ class RegisterViewModel: ObservableObject {
     func isValid() -> Bool {
         return !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty && !password.isEmpty
     }
+
+    func submit() {
+        print("Performing login in view model")
+    }
 }
